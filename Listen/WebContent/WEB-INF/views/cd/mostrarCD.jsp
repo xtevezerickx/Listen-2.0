@@ -8,13 +8,32 @@
 			<div class="painel-imagem">
 				<img src="imagens/CD${cd.idCD}.png"/>
 			</div>
+			
 			<div id="painel-faixas" class="painel-info">
-			<p class="cd-fonte">${cd.nomeCD}</p>
-			<p>${cd.nomeArtista}</p>
+			<input type="hidden" name=idCD value="${cd.idCD}">
+			<label>Nome:</label><input type="text" value="${cd.nomeCD }"name="nomeCD"> 
+			<label>Artista:</label><input type="text"  value="${cd.nomeArtista }" name="nomeArtista">
 			<hr>
-			<p>${cd.gravadora}</p>
-			<p>${cd.dscGenero}</p>
-			<p>${cd.dataLancamento}</p>
+			<label>Gravadora:</label>	<input type="text"  value="${cd.gravadora }" name="gravadora">
+			<br>
+			<label>Genero:</label>
+						<select name=dscGenero >
+					
+							<c:forEach items="${listaGeneros}" var="genero">
+								<c:choose>
+									<c:when test="${cd.dscGenero eq genero }">
+									<option selected="selected">${cd.dscGenero }</option>
+									</c:when>
+								<c:otherwise>
+									<option>${genero}</option>
+								</c:otherwise>
+								
+								</c:choose>
+					
+							</c:forEach>
+						</select>
+			<br>
+			<label>Preço:</label>	<input type="text" value="${cd.preco}" name="preco">
 			<hr>
 			<p class="faixa-fonte">Preço: R$${cd.preco}0</p>
 			<hr>

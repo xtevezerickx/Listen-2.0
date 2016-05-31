@@ -13,7 +13,7 @@
 					<p class="preco-fonte">R$ ${cd.preco}0</p>
 				</div>
 				<div class="cd-menu">
-					<p class="menu-fonte">Comprar<span class="glyphicon glyphicon-shopping-cart icone"	aria-hidden="true"></span></p>
+					<p class="menu-fonte"><a href="adicionarCarrinho?idCd=${cd.idCD}">Comprar<span class="glyphicon glyphicon-shopping-cart icone"	aria-hidden="true"></span></a></p>
 					<p class="menu-fonte">|</p>
 					<p id="mais-informacoes" class="menu-fonte">Mais Informações<span class="glyphicon glyphicon-info-sign icone black" aria-hidden="true"></span></p>
 				</div>

@@ -1,4 +1,4 @@
-<script>
+
 
 var i = 1;
 
@@ -52,7 +52,7 @@ $(document).ready(function() {
 
 	    reader.onload = function (e) {
 	        // get loaded data and render thumbnail.
-	        document.getElementById("preview").src = e.target.result;
+	    	document.getElementById("preview").src = e.target.result;
 	    };
 
 	    // read the image file as a data URL.
@@ -60,4 +60,3 @@ $(document).ready(function() {
 	};
 });
 
-</script>
