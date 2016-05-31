@@ -1,0 +1,36 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<div class="col-sm-2 sidenav text-center">
+	<label>Procure seu cd por:</label>
+
+		<div class="panel-group" id="accordion">
+		    <div class="panel panel-primary">
+		      <div class="panel-heading">
+		        <h4 class="panel-title" data-toggle="collapse" data-target="#collapse1">
+		          <a href="#" data-parent="#accordion"><strong>Genero</strong>  <span class="glyphicon glyphicon-chevron-down"></span></a>
+		        </h4>
+		      </div>
+		      <div id="collapse1" class="panel-collapse collapse">
+		      
+			        <c:forEach items="${quantidadePorGenero}" var="genero" >
+						<a href="" class="list-group-item">${genero.dscGenero}<span class="badge">${genero.qtdGenero }</span></a>
+					</c:forEach>
+        
+			   </div>
+			   
+			    <div class="panel panel-primary">
+			      <div class="panel-heading">
+			        <h4 class="panel-title" data-toggle="collapse" data-target="#collapse2">
+			          <a href="#" data-parent="#accordion"><strong>Artista</strong>  <span class="glyphicon glyphicon-chevron-down"></span></a>
+			        </h4>
+			      	</div>
+			      	<div id="collapse2" class="panel-collapse collapse">
+		
+			        
+				        <c:forEach items="${listaArtistas}" var="artista">
+							<a href="" class="list-group-item">${artista.nomeArtista}<span class="badge">${artista.qtdArtista }</span></a>
+						</c:forEach>
+			  	  	</div>
+		 		 </div> 
+			</div>
+		</div>
+</div>

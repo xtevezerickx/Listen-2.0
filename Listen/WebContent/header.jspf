@@ -1,0 +1,30 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@ page contentType="text/html; charset=UTF-8" %>
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+	<title>Listen</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<%@ page contentType="text/html; charset=UTF-8" %>
+	<%@include file="WEB-INF/js/script.js"%>
+	<%@include file="WEB-INF/css/stylesheet.css"%>
+</head>
+<body>
+	<div class="cabecalho">
+		<div class="cabecalho-menu">
+			<a href="index" class="cabecalho-item">Listen</a>
+			<a href="cadastrarCD" class="cabecalho-item">Cadastrar</a>
+			<a href="listarCd" class="cabecalho-item">Editar</a>
+			<a href="listarCd" class="cabecalho-item">Filtrar</a>
+			<a href="listarCd" class="cabecalho-item">Meu Carrinho</a>
+			<a href="listarCd" class="cabecalho-item-direita">Entrar</a>
+			<a href="listarCd" class="cabecalho-item-direita">Cadastrar</a>
+			<div class="cabecalho-busca">
+				<input name="valorBusca" type="text" placeholder="Buscar"><span class="glyphicon glyphicon-search icone"> </span>
+			</div>
+		</div>
+	</div>
