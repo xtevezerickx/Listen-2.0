@@ -30,6 +30,5 @@ public class UsuarioController {
 		} catch (Exception e) {
 			throw e;
 		}
-
 	}
 }

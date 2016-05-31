@@ -15,7 +15,7 @@
 			<label>Artista:</label><input type="text"  value="${cd.nomeArtista }" name="nomeArtista">
 			<hr>
 			<label>Gravadora:</label>	<input type="text"  value="${cd.gravadora }" name="gravadora">
-			<br>
+			<br><br>
 			<label>Genero:</label>
 						<select name=dscGenero >
 					
@@ -33,14 +33,13 @@
 							</c:forEach>
 						</select>
 			<br>
-			<label>Preço:</label>	<input type="text" value="${cd.preco}" name="preco">
 			<hr>
-			<p class="faixa-fonte">Preço: R$${cd.preco}0</p>
+			<label>Preço: R$$</label>	<input type="text" value="${cd.preco}" name="preco">
 			<hr>
-			<form id="form-adicionar-faixa" action="adicionarFaixa" method="post">
-			<input id="faixa-nova" name="faixa" placeholder="Digite o Título da Música"><span id="adicionar-faixa" class="glyphicon glyphicon-plus icone-painel-adicionar"> </span>
-			<input type="hidden" name="cdId" value="${cd.idCD}" />
-			</form>
+			
+			<c:set var="numFaixa" value="${1}" scope="session"/>
+			<input id="faixa-nova-cadastro" placeholder="Digite o Título da Música"><span id="adicionar-faixa-cadastro" class="glyphicon glyphicon-plus icone-painel-adicionar"> </span>
+				
 			<hr>
 				<c:forEach items="${listaFaixas}" var="listaFaixa">
 						<input type="text" id="faixa" value="${listaFaixa.dscFaixa}"

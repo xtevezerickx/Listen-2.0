@@ -22,7 +22,12 @@
 					<tbody>
 						<c:forEach items="${cds}" var="cd">
 							<tr>
-								<td><img class="imagem-miniatura" src=<c:url value="imagens/CD${cd.idCD}.png"/> alt="Miniatuara da capa"></td>
+								<c:if test="${! empty cd.capa }">
+								<td><img class="imagem-miniatura" src=<c:url value="imagens/CD${cd.idCD}.png"/> alt="Miniatuara da capa"></td>							
+								</c:if>
+								<c:if test="${empty cd.capa }">
+								<td><img class="imagem-miniatura" src=<c:url value="imagens/not-found.jpg"/> alt="Miniatuara da capa"></td>
+								</c:if>
 								<td>${cd.nomeCD}</td>
 								<td>${cd.nomeArtista}</td>
 								<td>${cd.dataLancamento}</td>
@@ -52,6 +57,6 @@
 		
 <li><a href="listarCd?pag=${fn:length(paginas)}">Ultima</a></li>
 </ul>
-
+</footer>
 
 <%@include file="/footer.jspf"%>

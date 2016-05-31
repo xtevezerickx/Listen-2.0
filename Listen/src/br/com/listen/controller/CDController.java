@@ -97,7 +97,7 @@ public class CDController {
 		
 		System.out.println("file" + file.toString());
 		if(!file.isEmpty()){
-			String caminhoDaCapa = "C:\\Users\\Erick Maia\\Desktop\\Listen-master(Edu)\\Listen\\WebContent\\imagens\\CD"+idCd+".png";
+			String caminhoDaCapa = "C:\\Users\\Erick Maia\\git\\Listen-2.0\\Listen\\WebContent\\imagens\\CD"+idCd+".png";
 			db.inserirCapa(idCd,caminhoDaCapa);
 			BufferedImage src = ImageIO.read(new ByteArrayInputStream(file.getBytes()));
 			File destination = new File(caminhoDaCapa);

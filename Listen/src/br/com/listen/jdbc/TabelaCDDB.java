@@ -125,6 +125,7 @@ public class TabelaCDDB extends Conexao {
 				cd.setDataCriacao(rs.getDate("dataCadastro"));
 				cd.setDscGenero(rs.getString("dscGenero"));
 				cd.setNomeArtista(rs.getString("nomeArtista"));
+				cd.setCapa(rs.getString("capa"));
 				lista.add(cd);
 			}
 		} catch (SQLException e) {
@@ -432,6 +433,7 @@ public class TabelaCDDB extends Conexao {
 				cd.setDataCriacao(rs.getDate("dataCadastro"));
 				cd.setDscGenero(rs.getString("dscGenero"));
 				cd.setNomeArtista(rs.getString("nomeArtista"));
+				cd.setCapa(rs.getString("capa"));
 				lista.add(cd);
 			}
 		} catch (SQLException e) {
